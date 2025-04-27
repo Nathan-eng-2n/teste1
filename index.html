@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface Responsiva com JS</title>
+    <title>Site Responsivo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Minha Interface Incrível</h1>
-        <button id="openModalBtn">Abrir Tela Flutuante</button>
+        <nav class="navbar">
+            <div class="logo">Meu Site</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#novidades">Últimas Novidades</a></li>
+                <li><a href="#loja">Loja Online</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Tela Flutuante (Modal) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="closeBtn" class="close">&times;</span>
-            <h2>Bem-vindo à Tela Flutuante!</h2>
-            <p>Este é um exemplo de tela flutuante com JavaScript.</p>
-        </div>
-    </div>
+    <section id="sobre" class="section">
+        <h2>Sobre Mim</h2>
+        <p>Conteúdo sobre mim...</p>
+    </section>
+
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <p>Informações de contato...</p>
+    </section>
+
+    <section id="projetos" class="section">
+        <h2>Projetos</h2>
+        <p>Meus projetos...</p>
+    </section>
+
+    <section id="noticias" class="section">
+        <h2>Notícias</h2>
+        <p>Últimas notícias...</p>
+    </section>
+
+    <section id="novidades" class="section">
+        <h2>Últimas Novidades</h2>
+        <p>Novidades recentes...</p>
+    </section>
+
+    <section id="loja" class="section">
+        <h2>Loja Online</h2>
+        <p>Produtos disponíveis...</p>
+    </section>
 
     <footer>
-        <p>Desenvolvido por Nathan Figueiredo</p>
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
