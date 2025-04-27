@@ -1,30 +1,17 @@
-// Seleciona os elementos
-const modal = document.getElementById('modal');
-const openModalBtn = document.getElementById('openModalBtn');
-const closeBtn = document.getElementById('closeBtn');
+// Adicionando efeitos de flutuação com JavaScript para as seções
 
-// Abre o modal
-openModalBtn.onclick = function() {
-    modal.style.display = "block";
-    setTimeout(() => {
-        modal.style.opacity = "1"; // Anima a opacidade
-    }, 10);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.section');
 
-// Fecha o modal
-closeBtn.onclick = function() {
-    modal.style.opacity = "0"; // Anima o fechamento
-    setTimeout(() => {
-        modal.style.display = "none"; // Remove o modal após a animação
-    }, 300); // Tempo da animação
-}
+    sections.forEach(section => {
+        section.addEventListener('mouseenter', () => {
+            section.style.transform = 'translateY(-10px)';
+            section.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)';
+        });
 
-// Fecha o modal se clicar fora dele
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.opacity = "0";
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 300);
-    }
-}
+        section.addEventListener('mouseleave', () => {
+            section.style.transform = 'translateY(0)';
+            section.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        });
+    });
+});
